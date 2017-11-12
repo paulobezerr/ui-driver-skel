@@ -10,7 +10,18 @@ define('ui/components/machine/driver-%%DRIVERNAME%%/component', ['exports', 'emb
     bootstrap: function() {
       let config = this.get('store').createRecord({
         type        : '%%DRIVERNAME%%Config',
-        size        : 512,
+        vCpuCount      : 1,
+        memorySize     : 2048,
+        diskSize       : 5120,
+        boot2dockerUurl: null,
+        server         : null,
+        hostLabel      : null,
+        username       : null,
+        password       : null,
+        networkLabel   : null,
+        srLabel        : null,
+        uploadTimeout  : 300,
+        waitTimeout    : 1800,
       });
 
       let type = 'host';
@@ -34,9 +45,29 @@ define('ui/components/machine/driver-%%DRIVERNAME%%/component', ['exports', 'emb
       // Add more specific errors
 
       // Check something and add an error entry if it fails:
-      if ( parseInt(this.get('model.%%DRIVERNAME%%Config.size'),10) < 1024 )
+      if ( parseInt(this.get('model.%%DRIVERNAME%%Config.memorySize'),10) < 1024 )
       {
         errors.push('Size must be at least 1024 MB');
+      }
+
+      if ( parseint(this.get('model.%%DRIVERNAME%%Config.vCpuCount'), 10) < 1)
+      {
+        errors.push('You will need at least one vCPU.');
+      }
+
+      if (this.get('model.%%DRIVERNAME%%Config.server'))
+      {
+        errors.push('The field is mandatory server');
+      }
+
+      if (this.get('model.%%DRIVERNAME%%Config.username'))
+      {
+        errors.push('The field is mandatory username');
+      }
+
+      if (this.get('model.%%DRIVERNAME%%Config.password'))
+      {
+        errors.push('The field is mandatory password');
       }
 
       // Set the array of errors for display,
