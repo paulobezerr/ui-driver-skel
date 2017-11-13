@@ -12,7 +12,7 @@
         <div class="form-label">
           <label class="form-control-static">vCPU count</label>
         </div>
-        {{input type="text"
+        {{input type="number"
           class="form-control"
           value=model.%%DRIVERNAME%%Config.vCpuCount
         }}
@@ -23,7 +23,7 @@
           <label class="form-control-static">Memory size</label>
         </div>
         <div class="input-group">
-          {{input type="text"
+          {{input type="number"
             class="form-control"
             value=model.%%DRIVERNAME%%Config.memorySize
           }}
@@ -36,7 +36,7 @@
           <label class="form-control-static">Disk size</label>
         </div>
         <div class="input-group">
-          {{input type="text"
+          {{input type="number"
             class="form-control"
             value=model.%%DRIVERNAME%%Config.diskSize
           }}
@@ -88,7 +88,7 @@
         <div class="form-label">
           <label class="form-control-static">Password</label>
         </div>
-        {{input type="text"
+        {{input type="password"
           class="form-control"
           value=model.%%DRIVERNAME%%Config.password
         }}
@@ -119,7 +119,7 @@
           <label class="form-control-static">Upload timeout</label>
         </div>
         <div class="input-group">
-          {{input type="text"
+          {{input type="number"
             class="form-control"
             value=model.%%DRIVERNAME%%Config.uploadTimeout
           }}
@@ -132,7 +132,7 @@
           <label class="form-control-static">Wait timeout</label>
         </div>
         <div class="input-group">
-          {{input type="text"
+          {{input type="number"
             class="form-control"
             value=model.%%DRIVERNAME%%Config.waitTimeout
           }}
