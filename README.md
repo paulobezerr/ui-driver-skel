@@ -4,11 +4,14 @@ Rancher UI driver for XenServer docker-machine driver.
 
 ## Install
 
+* Put the URL in whitelist:
+  * Admin -> Settings -> Advanced settings
+  * Append in ``api.proxy.whitelist`` the github URL: ``paulobezerr.github.io``
 * Go to Admin -> Machine Drivers -> Add Machine Driver
-  * Binary URL, see `https://github.com/xenserver/docker-machine-driver-xenserver/releases`
-  * UI URL: see `https://github.com/paulobezerr/ui-driver-xenserver/releases`
+  * Binary URL, get in `https://github.com/xenserver/docker-machine-driver-xenserver/releases`
+  * UI URL: `https://paulobezerr.github.io/ui-driver-xenserver/dist/component.js`
   * Wait for the driver to become "Active"
-  * Go to Infrastructure -> Hosts -> Add Host, your driver and custom UI should show up.
+  * Go to Infrastructure -> Hosts -> Add Host, and select the XenServer
 
 ## Development
 
@@ -27,9 +30,20 @@ This package contains a small web-server that will serve up the custom driver UI
 
 ## Using
 
-* Add a Machine Driver in Rancher (Admin tab -> Settings -> Machine Drivers)
+* Put the URL in whitelist:
+  * Admin -> Settings -> Advanced settings
+  * Append in ``api.proxy.whitelist`` the github URL: ``paulobezerr.github.io``
+* Install (Admin tab -> Settings -> Machine Drivers)
   * Name: Your `xenserver`
   * Download URL: The URL for the driver binary (See `https://github.com/xenserver/docker-machine-driver-xenserver/releases`)
-  * Custom UI URL: The URL you uploaded the `dist` folder to, e.g. `https://github.com/paulobezerr/ui-driver-xenserver/releases/download/v1.0.0/component.js`)
+  * Custom UI URL: `https://paulobezerr.github.io/ui-driver-xenserver/dist/component.js`)
 * Wait for the driver to become "Active"
-* Go to Infrastructure -> Hosts -> Add Host, your driver and custom UI should show up.
+* Go to Infrastructure -> Hosts -> Add Host
+  * The Xen Server will be there for you!
+
+## Help wanted
+
+The advanced options must be modified.  
+There are some options does not apply, for example ``Docker Install URL``.  
+I don't know how to do this yet, but help it's very welcome!
+Thank you for use!
