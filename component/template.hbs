@@ -8,22 +8,20 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-12 col-md-2 form-label">
-        <label class="form-control-static">vCPU count</label>
-      </div>
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-12 col-md-6">
+        <div class="form-label">
+          <label class="form-control-static">vCPU count</label>
+        </div>
         {{input type="text"
           class="form-control"
           value=model.%%DRIVERNAME%%Config.vCpuCount
         }}
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12 col-md-2 form-label">
-        <label class="form-control-static">Memory size</label>
-      </div>
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-12 col-md-6">
+        <div class="form-label">
+          <label class="form-control-static">Memory size</label>
+        </div>
         <div class="input-group">
           {{input type="text"
             class="form-control"
@@ -32,13 +30,11 @@
           <span class="input-group-addon">MB</span>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12 col-md-2 form-label">
-        <label class="form-control-static">Disk size</label>
-      </div>
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-12 col-md-6">
+        <div class="form-label">
+          <label class="form-control-static">Disk size</label>
+        </div>
         <div class="input-group">
           {{input type="text"
             class="form-control"
@@ -47,97 +43,81 @@
           <span class="input-group-addon">MB</span>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12 col-md-2 form-label">
-        <label class="form-control-static">boot2docker url</label>
-      </div>
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-12 col-md-6">
+        <div class="form-label">
+          <label class="form-control-static">boot2docker url</label>
+        </div>
         {{input type="text"
           class="form-control"
           value=model.%%DRIVERNAME%%Config.boot2dockerUurl
         }}
-      </div>
     </div>
 
-    <div class="row">
-      <div class="col-sm-12 col-md-2 form-label">
-        <label class="form-control-static">server</label>
-      </div>
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-12 col-md-6">
+        <div class="form-label">
+          <label class="form-control-static">server</label>
+        </div>
         {{input type="text"
           class="form-control"
           value=model.%%DRIVERNAME%%Config.server
         }}
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12 col-md-2 form-label">
-        <label class="form-control-static">Host label</label>
-      </div>
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-12 col-md-6">
+        <div class="form-label">
+          <label class="form-control-static">Host label</label>
+        </div>
         {{input type="text"
           class="form-control"
           value=model.%%DRIVERNAME%%Config.hostLabel
         }}
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12 col-md-2 form-label">
-        <label class="form-control-static">Username</label>
-      </div>
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-12 col-md-6">
+        <div class="form-label">
+          <label class="form-control-static">Username</label>
+        </div>
         {{input type="text"
           class="form-control"
           value=model.%%DRIVERNAME%%Config.username
         }}
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12 col-md-2 form-label">
-        <label class="form-control-static">Password</label>
-      </div>
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-12 col-md-6">
+        <div class="form-label">
+          <label class="form-control-static">Password</label>
+        </div>
         {{input type="text"
           class="form-control"
           value=model.%%DRIVERNAME%%Config.password
         }}
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12 col-md-2 form-label">
-        <label class="form-control-static">Network label</label>
-      </div>
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-12 col-md-6">
+        <div class="form-label">
+          <label class="form-control-static">Network label</label>
+        </div>
         {{input type="text"
           class="form-control"
           value=model.%%DRIVERNAME%%Config.networkLabel
         }}
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12 col-md-2 form-label">
-        <label class="form-control-static">Sr label</label>
-      </div>
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-12 col-md-6">
+        <div class="form-label">
+          <label class="form-control-static">Sr label</label>
+        </div>
         {{input type="text"
           class="form-control"
           value=model.%%DRIVERNAME%%Config.srLabel
         }}
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12 col-md-2 form-label">
-        <label class="form-control-static">Upload timeout</label>
-      </div>
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-12 col-md-6">
+        <div class="form-label">
+          <label class="form-control-static">Upload timeout</label>
+        </div>
         <div class="input-group">
           {{input type="text"
             class="form-control"
@@ -146,13 +126,11 @@
           <span class="input-group-addon">Sec</span>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12 col-md-2 form-label">
-        <label class="form-control-static">Wait timeout</label>
-      </div>
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-12 col-md-6">
+        <div class="form-label">
+          <label class="form-control-static">Wait timeout</label>
+        </div>
         <div class="input-group">
           {{input type="text"
             class="form-control"
@@ -161,6 +139,7 @@
           <span class="input-group-addon">Sec</span>
         </div>
       </div>
+
     </div>
 
     {{!-- This partial contains the Labels and Advanced Options fields --}}
